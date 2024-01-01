@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://127.0.0.1:5500/music%20player/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="./Music Player_files/style.css">
+
+    <!-- Untuk Font Awesome versi 5 -->
+    <!-- untuk penggunaan fas fa- -->
+    <link rel="stylesheet" href="./Music Player_files/all.min.css">
+</head>
+<body>
+    <div id="app-cover">
+        <div id="bg-artwork" style="background-image: url(&quot;https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg&quot;);"></div>
+        <div id="bg-layer"></div>
+        <div id="player">
+            <div id="player-track" class="">
+                <div id="album-name">Dawn</div>
+                <div id="track-name">skyline - Dawn</div>
+                <div id="track-time" class="active">
+                    <div id="current-time">00:17</div>
+                    <div id="track-length">03:09</div>
+                </div>
+                <div id="s-area">
+                    <div id="ins-time" style="left: 0px; margin-left: 0px; display: none;">00:00</div>
+                    <div id="s-hover" style="width: 0px;"></div>
+                    <div id="seek-bar" style="width: 9.17066%;"></div>
+                </div>
+            </div>
+            <div id="player-content">
+                <div id="album-art" class="">
+                    <img src="./Music Player_files/_1.jpg" class="active" id="_1">
+                    <img src="./Music Player_files/_2.jpg" id="_2">
+                    <img src="./Music Player_files/_3.jpg" id="_3">
+                    <img src="./Music Player_files/_4.jpg" id="_4">
+                    <img src="./Music Player_files/_5.jpg" id="_5">
+                    <div id="buffer-box">Buffering ...</div>
+                </div>
+                <div id="player-controls">
+                    <div class="control">
+                        <div class="button" id="play-previous">
+                            <i class="fas fa-backward"></i>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <div class="button" id="play-pause-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <div class="button" id="play-next">
+                            <i class="fas fa-forward"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./Music Player_files/jquery.min.js.download"></script>
+<script src="./Music Player_files/script.js.download"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
